@@ -1,3 +1,41 @@
+/* Mobile Hamburger Button */
+.mobile-hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+}
+
+.hamburger-btn {
+  background-color: #008A00;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: #006600;
+  transform: scale(1.05);
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+}
+
 /* NETBRAMHA Sidebar - 20% width */
 .netbramha-sidebar {
   width: 20%;
@@ -10,12 +48,127 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: transform 0.3s ease;
 }
 
 /* Sidebar Header */
 .sidebar-header {
   padding: 20px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Header Options */
+.mobile-header-options {
+  display: none;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-header-options .header-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-header-options .header-nav-item:hover {
+  color: #F2F2F2;
+  padding-left: 8px;
+}
+
+.mobile-header-options .header-icon {
+  width: 16px;
+  height: 16px;
+  color: #ffffff;
+}
+
+.mobile-header-options .language-dropdown-wrapper {
+  position: relative;
+}
+
+.mobile-header-options .language-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  margin-top: 4px;
+  min-width: 140px;
+  z-index: 1060;
+  animation: dropdownFadeIn 0.2s ease-out;
+}
+
+.mobile-header-options .language-option {
+  padding: 10px 16px;
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-header-options .language-option:hover {
+  background-color: #f8f9fa;
+  color: #004364;
+  padding-left: 20px;
+}
+
+.mobile-header-options .language-option.selected {
+  background-color: #E3F2FD;
+  color: #004364;
+  font-weight: 500;
+}
+
+.mobile-header-options .dropdown-chevron {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s ease;
+  color: #ffffff;
+  margin-left: auto;
+}
+
+.mobile-header-options .dropdown-chevron.open {
+  transform: rotate(180deg);
+}
+
+.mobile-header-options .logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-header-options .logout-btn:hover {
+  color: #F2F2F2;
+  padding-left: 8px;
+}
+
+.mobile-header-options .logout-icon {
+  width: 16px;
+  height: 16px;
+  color: #ffffff;
 }
 
 .netbramha-brand {
@@ -156,12 +309,30 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .mobile-hamburger {
+    display: block;
+  }
+  
+  .mobile-overlay {
+    display: block;
+  }
+  
+  .mobile-header-options {
+    display: flex;
+  }
+  
   .netbramha-sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
+    width: 280px;
+    height: 100vh;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: -280px;
+    transform: translateX(0);
+    z-index: 1060;
+  }
+  
+  .netbramha-sidebar.mobile-open {
+    transform: translateX(280px);
   }
   
   .menu-item {

@@ -108,7 +108,6 @@
   text-transform: capitalize;
   text-decoration: underline !important;
   text-decoration-style: solid;
-  text-decoration-offset: 0%;
   text-decoration-thickness: 1px;
   background: none !important;
   border: none !important;
@@ -153,29 +152,7 @@
 
 @media (max-width: 768px) {
   .score-number {
-    font-size: 2.5rem;
-  }
-  
-  .gauge-svg {
-    width: 260px;
-    height: 150px;
-  }
-  
-  .score-actions {
-    flex-direction: column;
-    gap: 15px;
-    height: auto;
-    padding: 1rem;
-  }
-  
-  .credit-score-card .card-body {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .score-number {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   .gauge-svg {
@@ -183,12 +160,47 @@
     height: 140px;
   }
   
-  .greeting-text {
-    font-size: 1.1rem;
+  .score-actions {
+    flex-direction: column;
+    gap: 12px;
+    height: auto;
+    padding: 1rem;
   }
   
   .credit-score-card .card-body {
     padding: 1.25rem;
+  }
+  
+  .greeting-text {
+    font-size: 1.1rem;
+  }
+  
+  .score-description {
+    font-size: 0.9rem;
+  }
+  
+  .refresh-btn {
+    padding: 0.75rem 2rem !important;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .score-number {
+    font-size: 1.75rem;
+  }
+  
+  .gauge-svg {
+    width: 200px;
+    height: 120px;
+  }
+  
+  .greeting-text {
+    font-size: 1rem;
+  }
+  
+  .credit-score-card .card-body {
+    padding: 1rem;
   }
   
   .score-actions {
@@ -196,7 +208,11 @@
   }
   
   .refresh-btn {
-    padding: 0.75rem 1.5rem !important;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.25rem !important;
+    font-size: 0.85rem;
+  }
+  
+  .score-description {
+    font-size: 0.85rem;
   }
 }

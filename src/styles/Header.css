@@ -229,17 +229,8 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .header-nav {
-    gap: 16px;
-  }
-  
-  .custom-header .container-fluid {
-    padding: 0 15px;
-  }
-  
-  .language-dropdown {
-    right: auto;
-    left: -50px;
+  .custom-header {
+    display: none !important;
   }
 }
 

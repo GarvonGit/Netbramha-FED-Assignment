@@ -251,37 +251,6 @@
 
 @media (max-width: 768px) {
   .dashboard-content {
-    padding: 1.5rem;
-  }
-  
-  .dashboard-grid,
-  .dashboard-row,
-  .dashboard-single,
-  .dashboard-double {
-    gap: 1.5rem;
-  }
-  
-  .dashboard-row {
-    grid-template-columns: 1fr;
-  }
-  
-  .interactive-card .card-body {
-    padding: 1.25rem;
-  }
-  
-  .interactive-card-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-  }
-  
-  .interactive-card-count {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .dashboard-content {
     padding: 1rem;
   }
   
@@ -290,6 +259,10 @@
   .dashboard-single,
   .dashboard-double {
     gap: 1rem;
+  }
+  
+  .dashboard-row {
+    grid-template-columns: 1fr;
   }
   
   .interactive-card .card-body {
@@ -302,11 +275,84 @@
     font-size: 18px;
   }
   
+  .interactive-card-count {
+    font-size: 1.5rem;
+  }
+  
+  .disputes-content-section,
+  .enquiries-content-section {
+    padding: 1rem;
+  }
+  
+  .disputes-title,
+  .enquiries-title {
+    font-size: 0.9rem;
+  }
+  
+  .disputes-count,
+  .enquiries-count {
+    font-size: 1.25rem;
+  }
+  
+  .disputes-description {
+    font-size: 0.8rem;
+  }
+  
+  .enquiries-subtitle {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-content {
+    padding: 0.75rem;
+  }
+  
+  .dashboard-grid,
+  .dashboard-row,
+  .dashboard-single,
+  .dashboard-double {
+    gap: 0.75rem;
+  }
+  
+  .interactive-card .card-body {
+    padding: 0.75rem;
+  }
+  
+  .interactive-card-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
   .interactive-card-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   
   .interactive-card-count {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .disputes-content-section,
+  .enquiries-content-section {
+    padding: 0.75rem;
+  }
+  
+  .disputes-title,
+  .enquiries-title {
+    font-size: 0.85rem;
+  }
+  
+  .disputes-count,
+  .enquiries-count {
+    font-size: 1.1rem;
+  }
+  
+  .disputes-description {
+    font-size: 0.75rem;
+  }
+  
+  .enquiries-subtitle {
+    font-size: 0.7rem;
   }
 }
