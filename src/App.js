@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
+import Dashboard from './components/Dashboard/Dashboard';
+import Footer from './components/Footer/Footer';
+import { ScoreProvider } from './contexts/ScoreContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ScoreProvider>
+      <div className="App">
+        <div className="app-layout">
+          <Sidebar />
+          <div className="main-layout">
+            <Header />
+            <div className="main-content">
+              <Dashboard />
+            </div>
+            <Footer />
+          </div>
+        </div>
+      </div>
+    </ScoreProvider>
   );
 }
 

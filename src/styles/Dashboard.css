@@ -1,0 +1,312 @@
+/* Dashboard Styles */
+.dashboard-content {
+  padding: 2rem;
+  background-color: #f7f9fa;
+  min-height: calc(100vh - 56px);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-single {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Interactive Cards */
+.interactive-card {
+  border: none;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.interactive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.interactive-card .card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.interactive-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.interactive-card-icon.disputes {
+  background-color: #F44336;
+}
+
+.interactive-card-icon.enquiries {
+  background-color: #2196F3;
+}
+
+.interactive-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.interactive-card-count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1976D2;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.interactive-card-description {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.read-more-link {
+  color: #1976D2;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.read-more-link:hover {
+  color: #1565C0;
+  text-decoration: underline;
+}
+
+/* Disputes and Enquiries Cards */
+.disputes-card,
+.enquiries-card {
+  border: none;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.disputes-card:hover,
+.enquiries-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* Flex container with top border */
+.disputes-card,
+.enquiries-card {
+  border-top: 1px solid #00A6CA;
+  border-radius: 8px;
+}
+
+/* Disputes Card */
+.disputes-icon-section {
+  background-color: #E0F9FF;
+  width: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-top: 1rem;
+}
+
+.disputes-icon {
+  color: #00A6CA;
+  font-size: 20px;
+}
+
+.disputes-content-section {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.disputes-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #046899;
+  font-family: 'Roboto', sans-serif;
+}
+
+.disputes-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+}
+
+.disputes-description {
+  font-size: 0.9rem;
+  color: #595959;
+  line-height: 1.4;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.disputes-read-more {
+  color: #046899;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.disputes-read-more:hover {
+  color: #035a7a;
+  text-decoration: underline;
+}
+
+/* Enquiries Card */
+.enquiries-icon-section {
+  background-color: #E3F2FD;
+  width: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-top: 1rem;
+}
+
+.enquiries-icon {
+  color: #00A6CA;
+  font-size: 20px;
+}
+
+.enquiries-content-section {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.enquiries-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #046899;
+  font-family: 'Roboto', sans-serif;
+}
+
+.enquiries-subtitle {
+  font-size: 0.85rem;
+  color: #595959;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+}
+
+.enquiries-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .dashboard-double {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 1.5rem;
+  }
+  
+  .dashboard-grid,
+  .dashboard-row,
+  .dashboard-single,
+  .dashboard-double {
+    gap: 1.5rem;
+  }
+  
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .interactive-card .card-body {
+    padding: 1.25rem;
+  }
+  
+  .interactive-card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .interactive-card-count {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-content {
+    padding: 1rem;
+  }
+  
+  .dashboard-grid,
+  .dashboard-row,
+  .dashboard-single,
+  .dashboard-double {
+    gap: 1rem;
+  }
+  
+  .interactive-card .card-body {
+    padding: 1rem;
+  }
+  
+  .interactive-card-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  .interactive-card-title {
+    font-size: 1rem;
+  }
+  
+  .interactive-card-count {
+    font-size: 1.5rem;
+  }
+}

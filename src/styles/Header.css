@@ -1,0 +1,268 @@
+/* Top Bar Styles */
+.top-bar {
+  background-color: #f7f9fa;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.top-bar-text {
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header Styles */
+.custom-header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e9ecef;
+  padding: 12px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1050;
+  min-height: 64px;
+}
+
+.netbanking-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  background-color: #008A00;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-left: -20px;
+}
+
+
+.brand-text {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-nav-item {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  outline: none !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #262626 !important;
+  text-decoration: none !important;
+  padding: 6px 0 !important;
+  border: none !important;
+  background: transparent !important;
+  transition: color 0.3s ease;
+}
+
+.header-nav-item:hover {
+  color: #1a1a1a !important;
+}
+
+.header-nav-item:focus {
+  color: #262626 !important;
+  box-shadow: none !important;
+}
+
+.header-icon {
+  width: 16px;
+  height: 16px;
+  color: #004364;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.header-nav-item:hover .header-icon {
+  color: #003a56;
+}
+
+/* Language Dropdown Styles */
+.language-dropdown-wrapper {
+  position: relative;
+}
+
+.language-toggle {
+  cursor: pointer;
+  user-select: none;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.dropdown-chevron {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s ease;
+  color: #004364;
+}
+
+.dropdown-chevron.open {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  margin-top: 4px;
+  min-width: 140px;
+  z-index: 1060;
+  animation: dropdownFadeIn 0.2s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-option {
+  padding: 10px 16px;
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.language-option:hover {
+  background-color: #f8f9fa;
+  color: #004364;
+  padding-left: 20px;
+}
+
+.language-option.selected {
+  background-color: #E3F2FD;
+  color: #004364;
+  font-weight: 500;
+}
+
+.language-option.selected::after {
+  content: '✓';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #004364;
+  font-weight: bold;
+}
+
+/* Logout Button Styles */
+.logout-btn {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  background-color: transparent !important;
+  border: none !important;
+  color: #262626 !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  padding: 6px 0 !important;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: transparent !important;
+  color: #1a1a1a !important;
+  border: none !important;
+}
+
+.logout-btn:focus {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.logout-btn:active {
+  background-color: transparent !important;
+  border: none !important;
+  color: #1a1a1a !important;
+}
+
+.logout-icon {
+  width: 16px;
+  height: 16px;
+  color: #004364;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+
+.logout-btn:hover .logout-icon {
+  color: #003a56;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-nav {
+    gap: 16px;
+  }
+  
+  .custom-header .container-fluid {
+    padding: 0 15px;
+  }
+  
+  .language-dropdown {
+    right: auto;
+    left: -50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .header-nav-item {
+    font-size: 13px;
+  }
+  
+  .logout-btn {
+    font-size: 13px;
+    padding: 6px 0 !important;
+  }
+  
+  .language-dropdown {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+    min-width: auto;
+  }
+}

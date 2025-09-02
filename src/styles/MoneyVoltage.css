@@ -1,0 +1,308 @@
+/* Money Voltage Styles */
+.money-voltage-wrapper {
+  margin-bottom: 2rem;
+}
+
+.money-voltage-card {
+  border: none;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  background: #F7F9FA;
+  overflow: hidden;
+}
+
+.money-voltage-card .card-body {
+  padding: 1.5rem;
+}
+
+/* Header Styles - Outside Card */
+.voltage-header {
+  margin-bottom: 1rem;
+}
+
+.voltage-header .graph-titles {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #046899;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Info icon styles moved to global App.css */
+
+/* Voltage Bar */
+.voltage-bar-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.voltage-bar-container {
+  display: flex;
+  height: 56px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 1px;
+  background-color: #ffffff;
+}
+
+.voltage-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.voltage-segment:hover {
+  transform: scaleY(1.1);
+}
+
+.segment-percentage {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Score Pointer */
+.score-pointer {
+  position: absolute;
+  top: -15px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.pointer-triangle {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 6px solid #007bff;
+  margin-bottom: 2px;
+}
+
+.pointer-text {
+  font-size: 9px;
+  font-weight: 600;
+  color: #007bff;
+  font-family: 'Roboto', sans-serif;
+  white-space: nowrap;
+}
+
+/* Current Score Display */
+.current-score {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0;
+  transform: translateX(-50%);
+}
+
+.score-pointer {
+  margin-bottom: 0.5rem;
+}
+
+.pointer-triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #004364;
+}
+
+.score-label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  vertical-align: middle;
+  color: #6c757d;
+  margin: 0 0 0.5rem 0;
+}
+
+.score-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+/* Separating Line */
+.separating-line {
+  width: 100%;
+  height: 1px;
+  background-color: #D9D9D9;
+  margin: 2rem 0;
+}
+
+/* Score Range Legend */
+.score-legend {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legend-label {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.legend-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.legend-color-box {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legend-range {
+  font-size: 1rem;
+  color: #595959;
+  font-family: 'Roboto', sans-serif;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+/* Bottom Description */
+.voltage-description {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.main-description {
+  font-size: 1rem;
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 0 0.5rem 0;
+  font-weight: 400;
+}
+
+.sub-description {
+  font-size: 0.85rem;
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .money-voltage-card .card-body {
+    padding: 1.25rem;
+  }
+  
+  .voltage-bar-container {
+    height: 35px;
+  }
+  
+  .segment-percentage {
+    font-size: 11px;
+  }
+  
+  .score-number {
+    font-size: 2.5rem;
+  }
+  
+  .legend-items {
+    gap: 0.75rem;
+  }
+  
+  .legend-item {
+    gap: 0.4rem;
+  }
+  
+  .legend-color-box {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .legend-range {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .money-voltage-card .card-body {
+    padding: 1rem;
+  }
+  
+  .voltage-header .graph-titles {
+    font-size: 1rem;
+  }
+  
+  .voltage-bar-container {
+    height: 30px;
+  }
+  
+  .segment-percentage {
+    font-size: 10px;
+  }
+  
+  .score-number {
+    font-size: 2rem;
+  }
+  
+  .legend-items {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .main-description {
+    font-size: 0.9rem;
+  }
+  
+  .sub-description {
+    font-size: 0.8rem;
+  }
+}
+.voltage-body {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    background-color: #F7F9FA;
+    border-radius: 12px;
+    margin: 1rem;
+}
+
+.voltage-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    z-index: -1;
+}
