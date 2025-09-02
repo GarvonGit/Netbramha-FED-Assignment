@@ -1,4 +1,3 @@
-// src/components/Cards/InfoCard.js
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FaFileAlt, FaDownload, FaEye, FaCalendarAlt, FaChartLine, FaClock, FaChevronRight } from 'react-icons/fa';
