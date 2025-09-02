@@ -145,11 +145,14 @@ const NBScoreHistory = () => {
             // Other indexes
             return '#bfbfbf';
           },
-          font: {
-            family: 'Roboto',
-            size: 12,
-            weight: '700',
-            style: 'normal',
+          font: function(context) {
+            const value = context.value;
+            return {
+              family: 'Roboto',
+              size: 12,
+              weight: (value === scoreData.minScore || value === scoreData.maxScore) ? '700' : '400',
+              style: 'normal',
+            };
           },
           lineHeight: 16,
           letterSpacing: '1%',

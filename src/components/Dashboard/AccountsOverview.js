@@ -95,7 +95,7 @@ const AccountsOverview = () => {
       </Card.Header>
       <Card.Body className="accounts-body pb-0">
         <div className="d-flex align-items-center">
-          <div className="chart-container">
+          <div className="account-chart-container">
             <Doughnut key="accounts-overview-chart" data={data} options={chartOptions} />
             <div className="chart-center-text">
               <div className="center-label">Total Accounts</div>
